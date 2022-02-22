@@ -27,19 +27,20 @@
     <div id="app" class="app animated fadeInLeft"> 
      <ul> 
       <!-- <li> <a href="http://raspberrypi/pi-dashboard/" target="_blank"><img class="shake" src="img/png/shumeipai.png" /><strong>Pi</strong></a> </li> -->
+      <li> <a href="http://192.168.2.1" target="_blank"><img class="shake" src="img/png/RouterOS.png" /><strong>OpenWrt</strong></a> </li>
       <li> <a href="http://192.168.2.227:8080" target="_blank"><img class="shake" src="img/png/OVM.png" /><strong>Ovm</strong></a> </li>
       <li> <a href="http://192.168.2.227:9000" target="_blank"><img class="shake" src="img/png/docker.png" /><strong>Docker</strong></a> </li>
-      <li> <a href="https://192.168.2.227:10000" target="_blank"><img class="shake" src="img/png/webmin.png" /><strong>Webmin</strong></a> </li>
+      <!-- <li> <a href="https://192.168.2.227:10000" target="_blank"><img class="shake" src="img/png/webmin.png" /><strong>Webmin</strong></a> </li> -->
       <li> <a href="http://192.168.2.227:9090" target="_blank"><img class="shake" src="img/png/DSM.png" /><strong>Cockpit</strong></a> </li>
       <li> <a href="http://192.168.2.227:8096" target="_blank"><img class="shake" src="img/png/jellyfin.png" /><strong>Jellyfin</strong></a> </li>
-      <li> <a href="http://192.168.2.227:5210" target="_blank"><img class="shake" src="img/png/kedaoyun.png" /><strong>可道云</strong></a> </li>
-      <li> <a href="http://192.168.2.227:8900" target="_blank"><img class="shake" src="img/png/wz.png" /><strong>为知笔记</strong></a> </li>
+      <!-- <li> <a href="http://192.168.2.227:5210" target="_blank"><img class="shake" src="img/png/kedaoyun.png" /><strong>可道云</strong></a> </li> -->
+      <!-- <li> <a href="http://192.168.2.227:8900" target="_blank"><img class="shake" src="img/png/wz.png" /><strong>为知笔记</strong></a> </li> -->
       <li> <a href="http://192.168.2.227:5200" target="_blank"><img class="shake" src="img/png/nextcloud.png" /><strong>Nextcloud</strong></a> </li>
       <!-- <li> <a href="http://192.168.2.227:5218" target="_blank"><img class="shake" src="img/png/Downloads.png" /><strong>AriaNg</strong></a> </li> -->
       <li> <a href="http://192.168.2.227:8765" target="_blank"><img class="shake" src="img/png/FaceTime.png" /><strong>监控</strong></a> </li>
       <li> <a href="http://192.168.2.227:8123" target="_blank"><img class="shake" src="img/png/hs.png" /><strong>Assistant</strong></a> </li>
-      <li> <a href="http://192.168.2.227:8581" target="_blank"><img class="shake" src="img/png/bridge.png" /><strong>Bridge</strong></a> </li>
-      <li> <a href="http://192.168.2.227:18083" target="_blank"><img class="shake" src="img/png/Duplicati.png" /><strong>Mqtt</strong></a> </li>
+      <!-- <li> <a href="http://192.168.2.227:8581" target="_blank"><img class="shake" src="img/png/bridge.png" /><strong>Bridge</strong></a> </li> -->
+      <li> <a href="http://192.168.2.174:18083" target="_blank"><img class="shake" src="img/png/Duplicati.png" /><strong>Mqtt</strong></a> </li>
       <li style="padding: 0;line-height: 0;font-size: 0;height: 0;"></li>
       <li style="padding: 0;line-height: 0;font-size: 0;height: 0;"></li>
       <li style="padding: 0;line-height: 0;font-size: 0;height: 0;"></li>
@@ -85,36 +86,37 @@
   <script src="js/jquery.min.js"></script>
   <script>
     $(function() {
-      if(location.href.indexOf('192.168') != -1 || location.href.indexOf('raspberrypi') != -1) {
-        $('#app').show();
-      } else {
-        $('#app1').show();
-      }
-      $("#qieh").click(function() {
-        if($("#qieh").is(":checked")) {
-          $("#app").css("display", "none");
-          $("#app1").css("display", "block")
-        } else {
-          $("#app1").css("display", "none");
-          $("#app").css("display", "block")
-        }
-      })
+      $('#app').show();
+      // if(location.href.indexOf('192.168') != -1 || location.href.indexOf('raspberrypi') != -1) {
+      //   $('#app').show();
+      // } else {
+      //   $('#app1').show();
+      // }
+      // $("#qieh").click(function() {
+      //   if($("#qieh").is(":checked")) {
+      //     $("#app").css("display", "none");
+      //     $("#app1").css("display", "block")
+      //   } else {
+      //     $("#app1").css("display", "none");
+      //     $("#app").css("display", "block")
+      //   }
+      // })
     })
           
-    var _PageHeight = document.documentElement.clientHeight,
-      _PageWidth = document.documentElement.clientWidth;
-    var _LoadingTop = _PageHeight > 100 ? (_PageHeight - 100) / 2 : 0,
-      _LoadingLeft = _PageWidth > 35 ? (_PageWidth - 35) / 2 : 0;
-    var _LoadingHtml = '<div id="loadingDiv" style="position:absolute;left:0;width:100%;height:' + _PageHeight + 'px;top:0; opacity:0.3; filter: alpha(opacity=30); background-color:#000;z-index:10000;"><div class="coffee_cup"></div></div>';
-    document.write(_LoadingHtml);
-    document.onreadystatechange = completeLoading;
+    // var _PageHeight = document.documentElement.clientHeight,
+    //   _PageWidth = document.documentElement.clientWidth;
+    // var _LoadingTop = _PageHeight > 100 ? (_PageHeight - 100) / 2 : 0,
+    //   _LoadingLeft = _PageWidth > 35 ? (_PageWidth - 35) / 2 : 0;
+    // var _LoadingHtml = '<div id="loadingDiv" style="position:absolute;left:0;width:100%;height:' + _PageHeight + 'px;top:0; opacity:0.3; filter: alpha(opacity=30); background-color:#000;z-index:10000;"><div class="coffee_cup"></div></div>';
+    // document.write(_LoadingHtml);
+    // document.onreadystatechange = completeLoading;
 
-    function completeLoading() {
-      if (document.readyState == "complete") {
-        var loadingMask = document.getElementById('loadingDiv');
-        loadingMask.parentNode.removeChild(loadingMask)
-      }
-    }
+    // function completeLoading() {
+    //   if (document.readyState == "complete") {
+    //     var loadingMask = document.getElementById('loadingDiv');
+    //     loadingMask.parentNode.removeChild(loadingMask)
+    //   }
+    // }
   </script>
  </body>
 </html>
